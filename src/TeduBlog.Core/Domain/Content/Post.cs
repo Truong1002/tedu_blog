@@ -8,5 +8,7 @@ namespace TeduBlog.Core.Domain.Content
 {
     public class Post
     {
+        public int MyProperty { get; set; }
+        public int MyValue { get; set; }
     }
 }
