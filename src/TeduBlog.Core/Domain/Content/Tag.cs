@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeduBlog.Core.Domain.Content
 {
-    internal class Tag
+    [Table("Tags")]
+    public class Tag
     {
+        [Key]
+        public Guid Id { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public required string Name { get; set; }
     }
 }
