@@ -2,7 +2,7 @@ import { AfterViewInit, Component, HostBinding, Inject, Input, OnInit, Renderer2
 import { DOCUMENT, NgClass } from '@angular/common';
 
 import { getStyle, rgbToHex } from '@coreui/utils';
-import { TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, RowComponent, ColComponent } from '@coreui/angular-pro';
+import { TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, RowComponent, ColComponent } from '@coreui/angular';
 
 @Component({
     templateUrl: 'colors.component.html',

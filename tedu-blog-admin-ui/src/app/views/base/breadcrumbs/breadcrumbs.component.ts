@@ -11,7 +11,7 @@ import {
   ColComponent,
   RowComponent,
   TextColorDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 
 @Component({
   templateUrl: './breadcrumbs.component.html',

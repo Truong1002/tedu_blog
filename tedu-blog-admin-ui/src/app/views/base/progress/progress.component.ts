@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocsExampleComponent } from '@docs-components/public-api';
-import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, ProgressBarDirective, ProgressComponent as ProgressComponent_1, ProgressBarComponent, ProgressStackedComponent } from '@coreui/angular-pro';
+import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, ProgressBarDirective, ProgressComponent as ProgressComponent_1, ProgressBarComponent, ProgressStackedComponent } from '@coreui/angular';
 
 @Component({
     selector: 'app-progress',

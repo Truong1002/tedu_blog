@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocsExampleComponent } from '@docs-components/public-api';
-import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, TableDirective, TableColorDirective, TableActiveDirective, BorderDirective, AlignDirective } from '@coreui/angular-pro';
+import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, TableDirective, TableColorDirective, TableActiveDirective, BorderDirective, AlignDirective } from '@coreui/angular';
 
 @Component({
     selector: 'app-tables',
@@ -9,4 +9,8 @@ import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHead
     standalone: true,
     imports: [RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, DocsExampleComponent, TableDirective, TableColorDirective, TableActiveDirective, BorderDirective, AlignDirective]
 })
-export class TablesComponent {}
+export class TablesComponent {
+
+  constructor() { }
+
+}

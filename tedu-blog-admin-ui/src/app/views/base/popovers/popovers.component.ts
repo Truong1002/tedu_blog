@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DocsExampleComponent } from '@docs-components/public-api';
-import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, ButtonDirective, PopoverDirective } from '@coreui/angular-pro';
+import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, ButtonDirective, PopoverDirective } from '@coreui/angular';
 
 @Component({
     selector: 'app-popovers',
@@ -12,6 +12,8 @@ import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHead
 export class PopoversComponent implements OnInit {
 
   visible = true;
+
+  constructor() { }
 
   ngOnInit(): void {
     setTimeout(() => {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '@coreui/angular-pro';
+import { FooterComponent } from '@coreui/angular';
 
 @Component({
     selector: 'app-default-footer',

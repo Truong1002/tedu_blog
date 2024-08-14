@@ -27,7 +27,7 @@ import {
   ToasterComponent,
   ToasterPlacement,
   ToastHeaderComponent
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { AppToastComponent } from './toast-simple/toast.component';
 
 export enum Colors {
@@ -94,15 +94,6 @@ export class ToastersComponent implements OnInit {
       const { ...props } = { ...formValues, title };
       const componentRef = item.addToast(AppToastComponent, props, {});
       componentRef.instance['closeButton'] = props.closeButton;
-      componentRef.instance['visibleChange'].subscribe((value: any) => {
-        this.onVisibleChange(value)
-      });
-      componentRef.instance['visibleChange'].emit(true);
     });
-  }
-
-  onVisibleChange($event: any) {
-    console.log('onVisibleChange', $event)
-
   }
 }

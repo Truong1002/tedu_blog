@@ -11,7 +11,7 @@ import {
 import packageJson from '../../../package.json';
 import { IconDirective } from '@coreui/icons-angular';
 import { RouterLink } from '@angular/router';
-import { NavComponent, NavItemComponent, NavLinkDirective } from '@coreui/angular-pro';
+import { NavComponent, NavItemComponent, NavLinkDirective } from '@coreui/angular';
 
 @Component({
     selector: 'app-docs-example',

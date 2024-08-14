@@ -2,7 +2,15 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconDirective } from '@coreui/icons-angular';
 import { DocsExampleComponent } from '@docs-components/public-api';
-import { ButtonDirective, CardBodyComponent, CardComponent, CardHeaderComponent, ColComponent, RowComponent, TextColorDirective } from '@coreui/angular-pro';
+import {
+  ButtonDirective,
+  CardBodyComponent,
+  CardComponent,
+  CardHeaderComponent,
+  ColComponent,
+  RowComponent,
+  TextColorDirective
+} from '@coreui/angular';
 
 @Component({
   selector: 'app-buttons',

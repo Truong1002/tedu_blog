@@ -28,7 +28,7 @@ import {
   RowComponent,
   TextColorDirective,
   ThemeDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 
 @Component({
   selector: 'app-dropdowns',
@@ -68,5 +68,7 @@ import {
 export class DropdownsComponent {
 
   public colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger'];
+
+  constructor() { }
 
 }

@@ -1,4 +1,4 @@
-import { Component, computed, inject, Input } from '@angular/core';
+import { Component, computed, DestroyRef, inject, Input } from '@angular/core';
 import {
   AvatarComponent,
   BadgeComponent,
@@ -21,10 +21,12 @@ import {
   SidebarToggleDirective,
   TextColorDirective,
   ThemeDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { NgStyle, NgTemplateOutlet } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { IconDirective } from '@coreui/icons-angular';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { delay, filter, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-default-header',
@@ -34,8 +36,10 @@ import { IconDirective } from '@coreui/icons-angular';
 })
 export class DefaultHeaderComponent extends HeaderComponent {
 
+  readonly #activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   readonly #colorModeService = inject(ColorModeService);
   readonly colorMode = this.#colorModeService.colorMode;
+  readonly #destroyRef: DestroyRef = inject(DestroyRef);
 
   readonly colorModes = [
     { name: 'light', text: 'Light', icon: 'cilSun' },
@@ -50,8 +54,20 @@ export class DefaultHeaderComponent extends HeaderComponent {
 
   constructor() {
     super();
-    this.#colorModeService.localStorageItemName.set('coreui-pro-angular-admin-template-theme-default');
+    this.#colorModeService.localStorageItemName.set('coreui-free-angular-admin-template-theme-default');
     this.#colorModeService.eventName.set('ColorSchemeChange');
+
+    this.#activatedRoute.queryParams
+      .pipe(
+        delay(1),
+        map(params => <string>params['theme']?.match(/^[A-Za-z0-9\s]+/)?.[0]),
+        filter(theme => ['dark', 'light', 'auto'].includes(theme)),
+        tap(theme => {
+          this.colorMode.set(theme);
+        }),
+        takeUntilDestroyed(this.#destroyRef)
+      )
+      .subscribe();
   }
 
   @Input() sidebarId: string = 'sidebar1';
@@ -98,7 +114,7 @@ export class DefaultHeaderComponent extends HeaderComponent {
       message: 'Team, it\'s time for our monthly inventory check. Accurate counts ensure smooth operations. Let\'s nail it...'
     },
     {
-      id: 4,
+      id: 3,
       from: 'Ryan Miller',
       avatar: '4.jpg',
       status: 'info',

@@ -19,7 +19,7 @@ import {
   TextColorDirective,
   ThemeDirective,
   TooltipDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 
 @Component({
   selector: 'app-modals',

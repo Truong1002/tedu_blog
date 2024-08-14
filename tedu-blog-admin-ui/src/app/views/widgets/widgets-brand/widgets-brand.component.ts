@@ -1,7 +1,7 @@
 import { AfterContentInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
 import { IconDirective } from '@coreui/icons-angular';
-import { ColComponent, RowComponent, WidgetStatDComponent } from '@coreui/angular-pro';
+import { ColComponent, RowComponent, WidgetStatDComponent } from '@coreui/angular';
 import { ChartData } from 'chart.js';
 
 type BrandData = {

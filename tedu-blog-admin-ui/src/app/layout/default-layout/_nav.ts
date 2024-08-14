@@ -1,4 +1,4 @@
-import { INavData } from '@coreui/angular-pro';
+import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
@@ -130,15 +130,6 @@ export const navItems: INavData[] = [
         name: 'Dropdowns',
         url: '/buttons/dropdowns',
         icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Loading Button',
-        url: '/buttons/loading-buttons',
-        icon: 'nav-icon-bullet',
-        badge: {
-          color: 'danger-gradient',
-          text: 'PRO'
-        }
       }
     ]
   },
@@ -156,15 +147,6 @@ export const navItems: INavData[] = [
         name: 'Select',
         url: '/forms/select',
         icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Multi Select',
-        url: '/forms/multi-select',
-        icon: 'nav-icon-bullet',
-        badge: {
-          color: 'danger-gradient',
-          text: 'PRO'
-        }
       },
       {
         name: 'Checks & Radios',
@@ -187,36 +169,9 @@ export const navItems: INavData[] = [
         icon: 'nav-icon-bullet'
       },
       {
-        name: 'Date Picker',
-        url: '/forms/date-picker',
-        icon: 'nav-icon-bullet',
-        badge: {
-          color: 'danger-gradient',
-          text: 'PRO'
-        }
-      },
-      {
-        name: 'Date Range Picker',
-        url: '/forms/date-range-picker',
-        icon: 'nav-icon-bullet',
-        badge: {
-          color: 'danger-gradient',
-          text: 'PRO'
-        }
-      },
-      {
         name: 'Layout',
         url: '/forms/layout',
         icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Time Picker',
-        url: '/forms/time-picker',
-        icon: 'nav-icon-bullet',
-        badge: {
-          color: 'danger-gradient',
-          text: 'PRO'
-        }
       },
       {
         name: 'Validation',
@@ -224,6 +179,11 @@ export const navItems: INavData[] = [
         icon: 'nav-icon-bullet'
       }
     ]
+  },
+  {
+    name: 'Charts',
+    iconComponent: { name: 'cil-chart-pie' },
+    url: '/charts'
   },
   {
     name: 'Icons',
@@ -288,34 +248,6 @@ export const navItems: INavData[] = [
     }
   },
   {
-    name: 'Smart Table',
-    url: '/smart-table',
-    iconComponent: { name: 'cil-grid' },
-    badge: {
-      color: 'danger-gradient',
-      text: 'PRO'
-    }
-  },
-  {
-    title: true,
-    name: 'Plugins'
-  },
-  {
-    name: 'Calendar',
-    iconComponent: { name: 'cil-calendar' },
-    url: '/plugins/calendar'
-  },
-  {
-    name: 'Charts',
-    iconComponent: { name: 'cil-chart' },
-    url: '/plugins/charts'
-  },
-  {
-    name: 'Google Maps',
-    iconComponent: { name: 'cil-map' },
-    url: '/plugins/google-maps'
-  },
-  {
     title: true,
     name: 'Extras'
   },
@@ -343,63 +275,6 @@ export const navItems: INavData[] = [
         name: 'Error 500',
         url: '/500',
         icon: 'nav-icon-bullet'
-      }
-    ]
-  },
-  {
-    name: 'Apps',
-    url: '/apps',
-    iconComponent: { name: 'cil-layers' },
-    children: [
-      {
-        name: 'Invoicing',
-        iconComponent: { name: 'cil-spreadsheet' },
-        url: '/apps/invoicing',
-        children: [
-          {
-            name: 'Invoice',
-            url: '/apps/invoicing/invoice',
-            icon: 'nav-icon-bullet',
-            badge: {
-              color: 'danger-gradient',
-              text: 'PRO'
-            }
-          }
-        ]
-      },
-      {
-        name: 'Email',
-        url: '/apps/email',
-        iconComponent: { name: 'cil-envelope-open' },
-        children: [
-          {
-            name: 'Inbox',
-            url: '/apps/email/inbox',
-            icon: 'nav-icon-bullet',
-            badge: {
-              color: 'danger-gradient',
-              text: 'PRO'
-            }
-          },
-          {
-            name: 'Message',
-            url: '/apps/email/message',
-            icon: 'nav-icon-bullet',
-            badge: {
-              color: 'danger-gradient',
-              text: 'PRO'
-            }
-          },
-          {
-            name: 'Compose',
-            url: '/apps/email/compose',
-            icon: 'nav-icon-bullet',
-            badge: {
-              color: 'danger-gradient',
-              text: 'PRO'
-            }
-          }
-        ]
       }
     ]
   },

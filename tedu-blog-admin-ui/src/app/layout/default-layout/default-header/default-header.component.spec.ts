@@ -12,7 +12,7 @@ import {
   NavModule,
   ProgressModule,
   SidebarModule
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from '../../../icons/icon-subset';
 import { DefaultHeaderComponent } from './default-header.component';

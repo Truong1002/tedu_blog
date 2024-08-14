@@ -14,7 +14,7 @@ import {
   TemplateIdDirective,
   TextColorDirective,
   ThemeDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { IconDirective } from '@coreui/icons-angular';
 import { DocsExampleComponent } from '@docs-components/public-api';
 

@@ -22,21 +22,17 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
-    "typeRoots": [
-      "node_modules/@types",
-    ],
-    "skipLibCheck": true
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": false
+    "strictTemplates": true
   },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.spec.json" }
+    { "path": "./tsconfig.spec.json" },
   ]
 }

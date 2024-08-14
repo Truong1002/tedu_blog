@@ -11,7 +11,7 @@ import {
   GridModule,
   NavbarModule,
   NavModule
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from '../../../icons/icon-subset';
 import { DropdownsComponent } from './dropdowns.component';

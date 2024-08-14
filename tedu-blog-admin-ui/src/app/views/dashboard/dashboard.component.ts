@@ -18,7 +18,7 @@ import {
   RowComponent,
   TableDirective,
   TextColorDirective
-} from '@coreui/angular-pro';
+} from '@coreui/angular';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
 import { IconDirective } from '@coreui/icons-angular';
 
