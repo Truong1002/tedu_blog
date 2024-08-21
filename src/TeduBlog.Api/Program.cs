@@ -16,7 +16,14 @@ using TeduBlog.Data.SeedWorks;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
-
+var TeduCorsPolicy = "TeduCorsPolicy";
+builder.Services.AddCors(o => o.AddPolicy(TeduCorsPolicy, builder =>
+{
+    builder.AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithOrigins(configuration["AllowedOrigins"])
+        .AllowCredentials();
+}));
 // Add services to the container.
 //Config DB Context and ASP.NET Core Identity
 builder.Services.AddDbContext<TeduBlogContext>(options =>
@@ -107,7 +114,7 @@ if (app.Environment.IsDevelopment())
         c.DisplayRequestDuration();
     });
 }
-
+app.UseCors(TeduCorsPolicy);
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

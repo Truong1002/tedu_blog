@@ -17,7 +17,7 @@ namespace TeduBlog.Api.Controllers.AdminApi
         
         public PostController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _unitOfWork = unitOfWork;
+             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
